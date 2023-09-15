@@ -1,127 +1,93 @@
-# Image_manipulation_program
+# Image Manipulation Program
 
+## Table of Contents
+1. [Description](#description)
+2. [Features](#features)
+3. [Usage](#usage)
+4. [Dependencies](#dependencies)
+5. [Assumptions](#assumptions)
+6. [Contributions](#contributions)
+7. [License](#license)
+
+## Description
 This Image Manipulation Program is a Python-based application that allows you to perform various operations on images. It provides a user-friendly interface for tasks related to image details, resizing, rotation, intensity transforms, image analysis, filtering, image conversion, steganography, encryption, and watermarking. Additionally, it offers the option to save images after applying modifications.
+Below is a detailed description of the program's features and functionalities.
 
-Table of Contents
-Features
-Requirements
-How to Use
-Functionality
-Steganography
-Encryption
-Watermarking
-Saving Images
-Features<a name="features"></a>
-This program provides the following features:
+## Features
+### 1. Image Details
+   - Provides information about the loaded image:
+     - Width
+     - Height
+     - Format (e.g., JPEG, PNG)
+   - Displays histograms for both grayscale and RGB channels.
 
-Image Details:
+### 2. Image Resizing
+   - Allows users to resize the image while maintaining aspect ratio.
 
-Display image width, height, format.
-Generate histograms for both gray and RGB channels.
-Image Resizing:
+### 3. Image Rotation
+   - Users can rotate the image by 90-degree increments.
 
-Resize images to specified dimensions.
-Image Rotation:
+### 4. Intensity Transforms
+   a. **Histogram Equalization** (Implemented)
+      - Enhances the contrast of the image.
+   b. **Histogram Matching**
+      - Allows the user to match the image histogram to a reference histogram.
+   c. **Gamma Correction**
+      - Adjusts the gamma value to control brightness and contrast.
+   d. **Log Transformation**
+      - Enhances details in the darker regions of the image.
 
-Rotate images in 90-degree increments.
-Intensity Transforms:
+### 5. Image Analysis
+   - Displays edge maps using various highpass filters for edge detection.
 
-Histogram Equalization.
-Histogram Matching.
-Gamma Correction.
-Log Transformation.
-Image Analysis:
+### 6. Filtering
+   a. **Smoothing**
+      - Provides options for box and Gaussian smoothing filters.
+   b. **Sharpening**
+      - Enhances image details and edges.
+   c. **Color Mapping**
+      i. **Cold Filter**
+         - Applies a cool color filter to the image.
+      ii. **Warm Filter**
+         - Applies a warm color filter to the image.
 
-Display edge maps using different highpass filters.
-Filtering:
+### 7. Image Conversion
+   - Allows users to convert between different color spaces (e.g., RGB, grayscale, HSV).
 
-Smoothing (box and Gaussian).
-Sharpening.
-Color Mapping (Cold and Warm filters).
-Image Conversion:
+### 8. Steganography
+   - **Encode Function**
+      - Embeds hidden data (text, image, etc.) into the image.
+   - **Decode Function**
+      - Extracts hidden data from the image based on a predefined assumption.
 
-Convert between different color spaces.
-Steganography:
+### 9. Encryption
+   - **Encrypt Function**
+      - Encrypts the image using a chosen encryption algorithm and key.
+   - **Decrypt Function**
+      - Decrypts the encrypted image using the same encryption key.
 
-Encode and decode hidden messages within images.
-Encryption:
+### 10. Watermarking
+   - Users can add text or logos as watermarks to the image.
 
-Encrypt and decrypt images to protect their content.
-Watermarking:
+### 11. Save Images
+   - Provides the option to save the modified images after performing various operations.
 
-Add text or logos as watermarks to images.
-Save Images:
+## Usage
+To use the program, follow the instructions in the user interface to load an image and select the desired operation from the menu. Save the modified image when necessary.
 
-Save modified images to disk.
-Requirements<a name="requirements"></a>
-To run this program, you will need:
+## Dependencies
+- Python 3.x
+- OpenCV (for image manipulation)
+- NumPy (for numerical operations)
+- Matplotlib (for plotting histograms)
+- Other libraries based on the specific functionalities implemented (e.g., cryptography library for encryption)
 
-Python 3.x
-The following Python libraries: OpenCV, NumPy, SciPy, PIL (Pillow)
-Additional libraries for encryption and steganography (if used)
-You can install the required Python libraries using pip:
+## Assumptions
+- For steganography, assume a basic LSB (Least Significant Bit) algorithm for encoding and decoding.
+- For encryption, assume a symmetric encryption algorithm like AES (Advanced Encryption Standard).
 
-bash
-Copy code
-pip install opencv-python numpy scipy pillow
-How to Use<a name="how-to-use"></a>
-Clone this repository to your local machine.
-Install the required libraries as mentioned in the requirements section.
-Run the main.py file to launch the program.
-Use the user-friendly interface to select images and apply various image manipulation operations.
-Functionality<a name="functionality"></a>
-Here is a brief overview of how to use each functionality:
+## Contributions
+Contributions and improvements to this image manipulation program are welcome. Feel free to fork the repository, make changes, and submit pull requests.
 
-Image Details:
-
-Load an image to display its width, height, and format.
-Generate histograms for both gray and RGB channels.
-Image Resizing:
-
-Choose the dimensions (width and height) for resizing.
-Click the "Resize" button to apply the changes.
-Image Rotation:
-
-Click the "Rotate" button to rotate the image by 90 degrees.
-Intensity Transforms:
-
-Select the desired transform (Histogram Equalization, Histogram Matching, Gamma Correction, Log Transformation).
-Adjust parameters if needed.
-Click the "Apply" button to transform the image.
-Image Analysis:
-
-Choose the highpass filter type (e.g., Sobel, Laplacian).
-Click the "Apply" button to generate edge maps.
-Filtering:
-
-Select the filter type (Smoothing or Sharpening).
-Choose the specific filter (e.g., Box, Gaussian).
-Apply the filter to the image.
-Image Conversion:
-
-Convert between different color spaces (e.g., RGB to Grayscale, RGB to HSV).
-Steganography:
-
-Encode a message into an image using a secret key.
-Decode a hidden message from an encoded image using the same key.
-Encryption:
-
-Encrypt an image using a password.
-Decrypt the encrypted image with the same password.
-Watermarking:
-
-Add text or logos as watermarks to the image.
-Adjust transparency and position as needed.
-Steganography<a name="steganography"></a>
-The steganography functionality allows you to hide and retrieve messages within images. This implementation assumes the use of a secret key for encoding and decoding. Messages are embedded using a steganographic algorithm, and the key is required to retrieve the message.
-
-Encryption<a name="encryption"></a>
-The encryption functionality allows you to protect the content of images by encrypting them with a password. The same password is required to decrypt the image and view its content. This provides a level of security for sensitive image data.
-
-Watermarking<a name="watermarking"></a>
-You can use the watermarking feature to add text or logos as watermarks to your images. Adjust the transparency and position of the watermark to suit your needs.
-
-Saving Images<a name="saving-images"></a>
-After applying any modifications to the images, you have the option to save them to your local disk. Make sure to choose an appropriate file format and provide a meaningful name for the saved image.
-
-Enjoy using the Image Manipulation Program! Feel free to contribute to its development and expand its capabilities as needed.
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
