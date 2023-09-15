@@ -90,7 +90,7 @@ To use the program, follow the instructions in the user interface to load an ima
 - For encryption, assume a symmetric encryption algorithm like AES (Advanced Encryption Standard).
 
 ## Contributions
-Contributions and improvements to this image manipulation program are welcome. Feel free to fork the repository, make changes, and submit pull requests.
+Contributions and improvements to this image manipulation program are welcome. Feel free to fork the repository, make changes . 
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Enjoy using the Image Manipulation Program! Feel free to contribute to its development and expand its capabilities as needed.
+
