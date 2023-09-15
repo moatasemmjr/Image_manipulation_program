@@ -13,6 +13,9 @@
 This Image Manipulation Program is a Python-based application that allows you to perform various operations on images. It provides a user-friendly interface for tasks related to image details, resizing, rotation, intensity transforms, image analysis, filtering, image conversion, steganography, encryption, and watermarking. Additionally, it offers the option to save images after applying modifications.
 Below is a detailed description of the program's features and functionalities.
 
+[![Watch the Video](https://img.youtube.com/vi/OC9Bzr-SXoY/0.jpg)](https://www.youtube.com/watch?v=OC9Bzr-SXoY)
+
+
 ## Features
 ### 1. Image Details
    - Provides information about the loaded image:
